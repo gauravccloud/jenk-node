@@ -1,0 +1,231 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  content: "";
+}
+
+html,
+body,
+p {
+  margin: 0;
+  padding: 0;
+  background-color: #f0eeec;
+}
+
+a {
+  color: #1E88E5;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.no--select {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+h3 {
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+/* Main Style */
+body {
+  font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+
+.app__header {
+    position: fixed;
+    background: #fff;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    padding: 0 8px;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+    z-index: 10000;
+}
+
+.app__header::before {
+    display: flex;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+    content: 'Downloads only';
+    font-size: 13px;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    background: darken(#1D2227, 5%);
+    opacity: 0;
+    pointer-events: none;
+    color: #1D2227;
+    transition: opacity 0.3s cubic-bezier(0, 0, 0.3, 1);
+}
+
+.app-menu-toggle {
+    border: none;
+      height: 24px;
+      display: block;
+      padding: 0 0 0 32px;
+      margin: 0;
+      color: #1D2227;
+      font-size: 16px;
+      font-weight: 400;
+}
+
+.app__header-content {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      position: relative;
+      background: url(../assets/images/sonylivlogo.png) left center no-repeat;
+      margin-left: 50px;
+      cursor: pointer;
+}
+
+.app-content-link {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.app-content-link-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.app__header-content-navleft {
+    margin-left: 120px;
+}
+
+.app-content-navleft ul {
+    list-style: none;
+    float: left;
+    display: flex;
+    margin: 0px;       
+}
+
+.app-content-navleft ul li {
+    padding: 10px;
+    margin: 10px;
+}
+
+.mainBanner {
+    margin-top: 61px;
+    min-height: 300px;
+}
+
+.banner .owl-item img {
+    height: 80% !important;
+}
+
+.banner_item{
+    min-height: 350px !important;
+}
+
+.app-rails {
+    padding: 65px;
+}
+
+.load .item {
+    min-height: 12rem;
+}
+
+.load .item ul li{
+    height: 10rem;
+    background-color: lightblue;
+    display: flex;
+    margin: 5px;
+}
+
+.load .item ul li:hover {
+    height: 10rem;
+    background-color: lightblue;
+    display: flex;
+    margin: 5px;
+    border: 1px solid #f0eeec;
+    box-sizing: border-box;
+}
+
+.title-section {
+    width: 100%;
+    padding:5px;
+    display: -webkit-inline-box;
+}
+
+.title-section h2 {
+    float: left !important;
+}
+
+.title-section span {
+    position: absolute;
+    right: 65px;
+    line-height: 60px;
+    color: #0653b9;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+}
+
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
